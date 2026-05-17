@@ -15,7 +15,7 @@ export default {
       return new Response('Method not allowed', { status: 405 });
     }
 
-    const GEMINI_API_KEY = 'AIzaSyClumJAjZcj7X1xV_WajERWTauD_x3X9MY';
+    const GEMINI_API_KEY = env.GEMINI_API_KEY;
     const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`;
 
     const body = await request.json();
