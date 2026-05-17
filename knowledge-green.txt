@@ -1,1 +1,249 @@
-[Green Room knowledge base — da compilare]
+📚 KNOWLEDGE BANK – B&B CONCIERGE AI
+🟢 Versione specifica per la GREEN ROOM
+📍 INFORMAZIONI GENERALI
+Indirizzo esatto: Via Enrico Cravero n. 20, Scala P, Roma – Bell: Mangiaracina
+
+L'appartamento:
+
+"L'appartamento è composto da sole due stanze adibite a uso B&B: la Green Room e la Grey Room. Recentemente ristrutturato, dispone di WiFi e aria condizionata. Si trova all'interno di uno storico 'lotto' di Garbatella, veri e propri micro paesi con giardini e spazi comuni."
+
+Il contesto – Garbatella:
+
+"Garbatella è un quartiere affascinante e autentico, famoso per il suo stile architettonico 'barocchetto romano'. Passeggiare per le sue strade significa immergersi in un'atmosfera da piccolo borgo, con trattorie tipiche e spazi verdi. È un quartiere vivace e trendy, reso celebre anche da film e serie TV."
+
+Posizione strategica:
+
+"Siamo a 7 minuti a piedi dalla Metro Garbatella, a 3 fermate di metro dal Colosseo e a 6 fermate da San Pietro. La stazione Roma Ostiense dista 1,5 km."
+
+Il padrone di casa:
+
+"Il proprietario non abita nell'appartamento. La casa è adibita unicamente a B&B."
+
+🔐 SICUREZZA
+La zona è sicura?
+
+"Sì, la zona è assolutamente sicura. Garbatella è un quartiere popolare dove tutti si conoscono. Non è pericoloso. Inoltre, c'è la stazione dei Carabinieri (polizia) proprio accanto al palazzo.
+
+*Come regola generale per tutta Roma, per le ospiti che viaggiano da sole, consigliamo comunque di evitare di girare a piedi da sole dopo le 2:00-3:00 di notte. Non perché il quartiere sia pericoloso, ma come normale precauzione in qualsiasi grande città.*
+
+⚠️ Attenzione sui mezzi pubblici: ci sono borseggiatori, solitamente di etnia rom. Il loro trucco più comune è chiedere informazioni per distrarti mentre cercano di mettere le mani nelle tue tasche."
+
+Ci si può chiudere all'interno della camera?
+
+"Assolutamente sì."
+
+Chiusura camera quando si esce:
+
+"Per sicurezza, chiudi la porta della tua camera ogni volta che esci."
+
+🔑 CHIAVI
+Chiavi:
+
+"La chiave con il manico grigio è per le inferriate di sicurezza."
+
+Dove lasciare le chiavi al check-out:
+
+"Come indicato nel messaggio di check-out, ti chiediamo cortesemente di riporre le chiavi nel key box, dove sono state prese. Se per qualsiasi motivo non è possibile o non hai avuto tempo di utilizzare il key box, puoi lasciarle pure sul tavolo della tua camera senza bisogno di chiudere la porta a chiave. In questo caso, ti chiediamo la cortesia di avvertire Francesco con un messaggio via WhatsApp."
+
+Se perdi le chiavi:
+
+"Contatta Francesco e troverete una soluzione insieme."
+
+🌐 INTERNET
+Network name: Iliadbox
+
+Password: m5zbrqh9wvqmxw7nqccms2
+
+Attenzione: Può capitare che in determinati giorni la connessione sia lenta, soprattutto nella Green Room, perché il segnale fa fatica ad attraversare i muri spessi dell'edificio storico.
+
+🔹 Access point per la GREEN ROOM:
+"Se hai problemi di connessione, puoi chiedere a Francesco un access point aggiuntivo scrivendogli via WhatsApp.
+
+L'access point si trova nell'ultimo cassetto in basso del bagno. Per collegarlo:
+
+Collegalo alla presa elettrica
+
+Collega il cavo LAN alla presa LAN che si trova sotto la televisione (c'è un piccolo sportellino che va abbassato)
+
+La password dell'access point della Green Room è: 92101135
+
+Dopo l'uso, sei pregato di rimettere l'access point nel cassetto dov'era."
+
+🛌 LA GREEN ROOM – INFORMAZIONI SPECIFICHE
+Letto:
+
+"Il letto della Green Room è un letto matrimoniale alla francese: invece dei canonici 160 cm di larghezza, è largo 140 cm. È comunque normalmente sufficiente anche per una coppia. È un modello a soppalco (Stora di Ikea). Si posiziona come una soluzione intermedia tra un letto a una piazza e mezzo e un matrimoniale tradizionale."
+
+Bagno:
+
+"Il bagno è assolutamente privato e riservato agli ospiti della Green Room, ma è raggiungibile dal corridoio (non è in camera)."
+
+Riscaldamento in bagno:
+
+"Nel bagno della Green Room è presente un termosifone standard."
+
+Illuminazione camera: Regolabile con sistema a dimmer.
+
+🚿 ACQUA CALDA (valido per entrambe le stanze)
+"L'acqua calda è fornita ad entrambe le stanze da uno scaldabagno a pompa di calore da 100 litri. Informazioni importanti:
+
+*Tempo di riscaldamento normale: 2-3 ore per il pieno*
+
+Prima della doccia: premi il tasto 'set' una volta sullo scaldabagno per controllare la temperatura
+
+*Per riscaldamento più rapido: premi il tasto '>>' per attivare la modalità boost (1,5-2,5 ore)*
+
+Se altri ospiti hanno appena fatto la doccia, potresti dover aspettare che l'acqua si riscaldi di nuovo
+
+Orari consigliati per la doccia:
+
+Green Room: preferibilmente al mattino
+
+Grey Room: preferibilmente nel tardo pomeriggio/sera
+
+Gli ospiti possono accordarsi tra loro per orari diversi."
+
+🔥 RISCALDAMENTO IN CAMERA (valido per entrambe le stanze)
+Riscaldamento centralizzato:
+
+"Il riscaldamento è centralizzato (condiviso dall'edificio) ed è attivo tra le 16:00 e le 22:00 durante la stagione invernale. Il termosifone si trova vicino alla porta d'ingresso.
+
+Se il termosifone non è caldo durante l'orario di accensione, gira la manopola nella direzione opposta (dovrebbe essere impostata tra 2 e 5).
+
+Esempio: [link all'immagine della valvola] https://www.cataniaoggi.it/wp-content/uploads/2024/12/valvola-termosifone-cataniaoggi.it-12122024-pixabay-1024x576.jpg"
+
+🍽️ CUCINA – INFORMAZIONI COMUNI
+La cucina è a uso esclusivo o condiviso?
+
+"La cucina è ad uso condiviso. Ti chiediamo quindi di rispettare gli spazi e le cose anche degli altri ospiti. Tutti gli ospiti sono caldamente invitati a pulire le stoviglie utilizzate subito dopo l'uso."
+
+Dove sono le forchette e le posate?
+
+"Le posate sono un po' nascoste. Apri il cassetto davanti al frigorifero, quello più in alto (alla destra del frigorifero). Una volta aperto questo cassetto, noterai un altro piccolo cassetto a scomparsa, nella parte interna in alto. Lì troverai forchette, posate e le altre cose.
+
+Sotto troverai pentole e tutti gli utensili necessari."
+
+Dove posso riporre il cibo e l'acqua del supermercato?
+
+"Puoi usare qualsiasi spazio libero nei pensili e nel frigorifero che non sia occupato da altri ospiti. I ripiani sono stati suddivisi per stanze.
+
+⚠️ Attenzione: il giorno del check-out di una stanza, tutto il cibo di quella stanza che viene trovato nei pensili o nel frigorifero verrà buttato."
+
+Cucina a induzione:
+
+"Il piano cottura è a induzione e funziona solo quando una pentola o una padella viene appoggiata sopra."
+
+Filtro dell'acqua: È presente un sistema di filtraggio dell'acqua per evitare di comprare acqua minerale.
+
+Microonde: Fornito e funzionante.
+
+Ho trovato stoviglie e piatti sporchi da altri ospiti, cosa devo fare?
+
+"Ti chiediamo di avvertire Francesco, che segnalerà agli ospiti responsabili di non farlo più."
+
+🛒 SUPERMERCATI E MERCATI
+Ci sono supermercati o mercati vicini?
+
+"Sì, nella zona hai diverse opzioni:
+
+Micro market di quartiere più vicino: Margherita Conad, via Fincati 10 (a pochi minuti)
+
+Supermercato più grande: Sacoph, via Caffaro 55 (a circa 5 minuti)"
+
+🚗 PARCHEGGIO
+C'è parcheggio in zona?
+
+"Purtroppo il parcheggio in zona è limitato, perché siamo in un'area piena di ristoranti e locali. La sera, soprattutto nei weekend, ma anche in primavera ed estate quasi tutte le sere, è molto complicato trovare parcheggio.
+
+Dalla mia esperienza, le vie dove è più probabile trovare parcheggio sono:
+
+Via Giovannipoli
+
+Via Cialdi"
+
+🛁 BAGNO E SERVIZI (Green Room)
+Dove trovo gli asciugamani?
+
+"Gli asciugamani, insieme al phon, si trovano nel mobiletto del bagno. Sono inclusi come indicato sulla pagina Airbnb."
+
+Dove trovo la carta igienica?
+
+"La carta igienica è visibile o nell'armadietto del bagno."
+
+Non c'è abbastanza carta igienica, cosa devo fare?
+
+"Contatta Francesco via WhatsApp e provvederà a farti avere altra carta igienica."
+
+Il bagno:
+
+"Il bagno è piuttosto stretto e non ha il bidet, ma ha un doccino."
+
+Specchio del bagno:
+
+"Lo specchio del bagno è illuminato e il colore e l'intensità della luce possono essere regolati."
+
+🧺 LAVATRICE
+Posso usare la lavatrice?
+
+"Puoi usare la lavatrice, purché nel rispetto degli altri ospiti."
+
+🚭 REGOLE
+È permesso fumare?
+
+"Non è permesso fumare, grazie. È presente un sistema di rilevamento fumo e l'allarme è estremamente rumoroso."
+
+💡 COSA FARE SE...
+Salta la corrente:
+
+"Se salta la corrente, puoi trovare il quadro elettrico subito all'interno della porta d'ingresso a sinistra (c'è una porta). Probabilmente l'interruttore 'Generale' è abbassato. Tiralo su.
+
+Ricorda di riavviare lo scaldabagno premendo semplicemente il pulsante di accensione (quello classico circolare con il trattino in basso) e poi cliccando il tasto 'set' senza modificare le impostazioni finché non smette di lampeggiare nulla."
+
+🚇 TRASPORTI PUBBLICI
+Biglietti:
+
+"Puoi consultare tutte le tariffe su www.atac.roma.it/biglietti-e-abbonamenti"
+
+🍝 RISTORANTI E BAR – GUIDA DI ZONA
+"Trovi la mia guida completa dei ristoranti, trattorie, enoteche e bar nella pagina dell'annuncio Airbnb. In sintesi, i locali più vicini e consigliati sono:
+
+Panonto (pizzeria, dietro casa, non si prenota)
+
+Tanto pè magnà (carbonara, 9 minuti)
+
+Er Grottino del Traslocatore (amatriciana, 3 minuti)
+
+Dar Moschino (trattoria storica, 5 minuti)
+
+Tozzo Strit Fud (street food romano, 1 minuto – con sconto del 10% dicendo che ti manda Francesco il Toscano)
+
+Bar Foschi (pasticceria e aperitivi, dietro casa)
+
+Prenota sempre, soprattutto nel weekend! Ti consiglio anche di provare i piatti tipici romani: Carbonara, Amatriciana, Cacio e Pepe, Gricia, Saltimbocca, Abbacchio, Carciofi alla Giudia e Trippa."
+
+💫 SERVIZI EXTRA (a pagamento)
+Offro ai miei ospiti alcuni servizi extra per rendere il soggiorno speciale:
+
+Noleggio biciclette: abbiamo due biciclette disponibili
+
+Preparazione pasta fatta in casa: ti insegno a preparare pasta e sugo seguendo la tradizione (Amatriciana, Carbonara, Ragù di carne, Cacio e Pepe)
+
+Giro in scooter: ti porto in un tour panoramico del centro di Roma in scooter
+
+📞 CONTATTI
+Chi posso contattare in caso di bisogno?
+
+"In caso di bisogno puoi contattare Francesco al numero 0039 327 039 3627 (anche via WhatsApp).
+
+Ti chiediamo però di utilizzare prima di tutto questo concierge virtuale, che ha tutte le informazioni necessarie per rispondere alla maggior parte delle domande e risolvere rapidamente i problemi più comuni. Solo se il concierge non dovesse essere sufficiente, contatta pure Francesco."
+
+✅ NOTE FINALI
+Da tenere a mente:
+
+Il bagno è stretto e non ha bidet (ha un doccino)
+
+L'acqua calda è limitata: 100 litri condivisi tra due stanze – evitare sprechi e rispettare gli altri ospiti
+
+L'appartamento è in un edificio storico: muri spessi, carattere unico
+
+La Green Room è quella con il letto a soppalco (140 cm) e il bagno esterno (privato ma nel corridoio)
