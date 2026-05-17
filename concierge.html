@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cravero20 — Concierge</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(160deg, #FFF9E6 0%, #E8F6FB 50%, #D4EFF8 100%);
+    color: #1C3040;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  header {
+    position: relative;
+    z-index: 2;
+    background: rgba(253, 250, 243, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(91,184,212,0.2);
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .back-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1.5px solid rgba(91,184,212,0.4);
+    color: #5BB8D4;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.2s;
+    flex-shrink: 0;
+  }
+
+  .back-btn:hover { background: rgba(91,184,212,0.1); }
+
+  .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1C3040;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+  }
+
+  .logo span { color: #5BB8D4; }
+
+  .header-center {
+    flex: 1;
+    text-align: center;
+  }
+
+  .room-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #7a9aaa;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+
+  .lang-flag {
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+
+  .chat-wrap {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 12px;
+  }
+
+  #messages {
+    flex: 1;
+    padding: 20px 0 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    overflow-y: auto;
+    min-height: 0;
+  }
+
+  .welcome-card {
+    background: rgba(253,250,243,0.85);
+    border: 1px solid rgba(91,184,212,0.2);
+    border-top: 3px solid #F5C842;
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 4px;
+  }
+
+  .welcome-card .greeting {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #1C3040;
+    margin-bottom: 6px;
+  }
+
+  .welcome-card p {
+    font-size: 0.8rem;
+    color: #5a7a8a;
+    line-height: 1.65;
+  }
+
+  .quick-questions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 2px 0 8px;
+  }
+
+  .quick-btn {
+    background: rgba(253,250,243,0.9);
+    border: 1.5px solid rgba(91,184,212,0.35);
+    color: #1C3040;
+    padding: 8px 14px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+
+  .quick-btn:hover {
+    border-color: #5BB8D4;
+    background: rgba(91,184,212,0.08);
+  }
+
+  .message {
+    display: flex;
+    gap: 10px;
+    animation: fadeUp 0.35s ease forwards;
+    opacity: 0;
+  }
+
+  .message.user { flex-direction: row-reverse; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  .avatar.ai {
+    background: linear-gradient(135deg, #5BB8D4, #3da0bc);
+    color: white;
+  }
+
+  .avatar.user {
+    background: linear-gradient(135deg, #F5C842, #d4a820);
+    color: white;
+  }
+
+  .bubble {
+    max-width: calc(100% - 50px);
+    padding: 11px 15px;
+    border-radius: 14px;
+    line-height: 1.6;
+    font-size: 0.875rem;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  .message.ai .bubble {
+    background: rgba(253,250,243,0.92);
+    border: 1px solid rgba(91,184,212,0.18);
+    border-left: 3px solid #5BB8D4;
+    border-radius: 4px 14px 14px 4px;
+  }
+
+  .message.user .bubble {
+    background: rgba(245,200,66,0.15);
+    border: 1.5px solid rgba(245,200,66,0.4);
+    border-radius: 14px 4px 4px 14px;
+    text-align: right;
+  }
+
+  .typing-dots {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    padding: 4px 0;
+  }
+
+  .typing-dots span {
+    width: 6px;
+    height: 6px;
+    background: #5BB8D4;
+    border-radius: 50%;
+    animation: dot 1.2s infinite;
+  }
+
+  .typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+  .typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+  @keyframes dot {
+    0%, 80%, 100% { opacity: 0.25; transform: scale(0.8); }
+    40% { opacity: 1; transform: scale(1); }
+  }
+
+  .input-area {
+    position: relative;
+    z-index: 2;
+    background: rgba(253,250,243,0.95);
+    border-top: 1px solid rgba(91,184,212,0.2);
+    padding: 12px 16px 16px;
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .tts-bar {
+    display: none;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .tts-bar.active { display: flex; }
+
+  .btn-stop-tts {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(220,80,80,0.1);
+    border: 1.5px solid rgba(220,80,80,0.4);
+    color: #c0392b;
+    border-radius: 20px;
+    padding: 7px 18px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .btn-stop-tts:hover { background: rgba(220,80,80,0.18); }
+
+  .input-row {
+    display: flex;
+    gap: 8px;
+    align-items: flex-end;
+  }
+
+  #textInput {
+    flex: 1;
+    background: white;
+    border: 1.5px solid rgba(91,184,212,0.3);
+    border-radius: 12px;
+    color: #1C3040;
+    padding: 11px 14px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 400;
+    resize: none;
+    min-height: 46px;
+    max-height: 120px;
+    outline: none;
+    transition: border-color 0.2s;
+    line-height: 1.5;
+  }
+
+  #textInput:focus { border-color: #5BB8D4; }
+  #textInput::placeholder { color: #9ab8c4; }
+
+  .btn-mic, .btn-send {
+    width: 46px;
+    height: 46px;
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.2s;
+  }
+
+  .btn-send {
+    background: linear-gradient(135deg, #5BB8D4, #3da0bc);
+    color: white;
+  }
+
+  .btn-send:hover { background: linear-gradient(135deg, #4aacc8, #2d90ac); }
+  .btn-send:disabled { opacity: 0.4; cursor: not-allowed; }
+
+  .btn-mic {
+    background: white;
+    border: 1.5px solid rgba(91,184,212,0.35);
+    color: #7a9aaa;
+  }
+
+  .btn-mic:hover { border-color: #5BB8D4; color: #5BB8D4; }
+
+  .btn-mic.recording {
+    background: rgba(245,200,66,0.15);
+    border-color: #F5C842;
+    color: #c4940a;
+    animation: pulse 1.2s ease infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(245,200,66,0.5); }
+    50% { box-shadow: 0 0 0 7px rgba(245,200,66,0); }
+  }
+
+  .status-bar {
+    text-align: center;
+    font-size: 0.66rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #9ab0bb;
+    margin-top: 8px;
+  }
+
+  .status-dot {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background: #5BB8D4;
+    border-radius: 50%;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <a class="back-btn" id="backBtn" href="#">&#8592;</a>
+    <a class="logo" href="#"><span id="logoText">Cravero20</span></a>
+  </div>
+  <div class="header-center">
+    <div class="room-label" id="roomLabel"></div>
+  </div>
+  <div class="header-right">
+    <span class="lang-flag" id="langFlag"></span>
+  </div>
+</header>
+
+<div class="chat-wrap">
+  <div id="messages">
+    <div class="welcome-card">
+      <div class="greeting" id="welcomeGreeting">Benvenuto!</div>
+      <p id="welcomeText">Sono il tuo concierge personale. Chiedimi tutto sull'appartamento, il WiFi, i ristoranti, i trasporti o i servizi extra di Francesco.</p>
+    </div>
+    <div class="quick-questions" id="quickQuestions"></div>
+  </div>
+</div>
+
+<div class="input-area">
+  <div class="tts-bar" id="ttsBar">
+    <button class="btn-stop-tts" id="stopTtsBtn">
+      <span>🔇</span> STOP
+    </button>
+  </div>
+  <div class="input-row">
+    <textarea id="textInput" rows="1"
+      onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendMessage()}"
+      oninput="this.style.height='auto';this.style.height=this.scrollHeight+'px'"></textarea>
+    <button class="btn-mic" id="micBtn" onclick="toggleMic()">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+        <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+        <line x1="12" y1="19" x2="12" y2="23"/>
+        <line x1="8" y1="23" x2="16" y2="23"/>
+      </svg>
+    </button>
+    <button class="btn-send" id="sendBtn" onclick="sendMessage()">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="22" y1="2" x2="11" y2="13"/>
+        <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+      </svg>
+    </button>
+  </div>
+  <div class="status-bar"><span class="status-dot"></span>Cravero20 Concierge · Garbatella, Rome</div>
+</div>
+
+<script>
+const PROXY_URL = 'https://gemini-proxy.manfranz.workers.dev/';
+
+const params = new URLSearchParams(window.location.search);
+const room = params.get('room') || 'green';
+const lang = params.get('lang') || 'en';
+
+const FLAGS = { it:'🇮🇹', en:'🇬🇧', fr:'🇫🇷', es:'🇪🇸', zh:'🇨🇳', ko:'🇰🇷' };
+const TTS_LANG = { it:'it-IT', en:'en-US', fr:'fr-FR', es:'es-ES', zh:'zh-CN', ko:'ko-KR' };
+const LANG_NAMES = { it:'Italiano', en:'English', fr:'Français', es:'Español', zh:'中文', ko:'한국어' };
+
+const ROOM_LABEL = { green: 'Green Room', gray: 'Gray Room' };
+const BACK_URL = { green: 'landing-green.html', gray: 'landing-gray.html' };
+
+const UI = {
+  it: {
+    greeting: 'Benvenuto!',
+    welcome: 'Sono il tuo concierge personale. Chiedimi tutto sull\'appartamento, il WiFi, i ristoranti, i trasporti o i servizi extra di Francesco.',
+    placeholder: 'Scrivi la tua domanda…',
+    quick: ['📶 WiFi', '🕙 Check-out', '🚿 Acqua calda', '🍝 Ristoranti', '🚇 Trasporti', '✨ Extra'],
+    quickMsg: ['Qual è la password del WiFi?', 'A che ora devo fare check-out?', 'Come funziona l\'acqua calda?', 'Quali ristoranti consigli?', 'Come arrivo al Colosseo?', 'Quali servizi extra offre Francesco?'],
+  },
+  en: {
+    greeting: 'Welcome!',
+    welcome: 'I\'m your personal concierge. Ask me anything about the apartment, WiFi, restaurants, transport, or Francesco\'s extra services.',
+    placeholder: 'Ask me anything…',
+    quick: ['📶 WiFi', '🕙 Check-out', '🚿 Hot water', '🍝 Restaurants', '🚇 Transport', '✨ Extras'],
+    quickMsg: ['What is the WiFi password?', 'What time is check-out?', 'How does the hot water work?', 'Which restaurants do you recommend?', 'How do I get to the Colosseum?', 'What extra services does Francesco offer?'],
+  },
+  fr: {
+    greeting: 'Bienvenue !',
+    welcome: 'Je suis votre concierge personnel. Posez-moi toutes vos questions sur l\'appartement, le WiFi, les restaurants, les transports ou les services supplémentaires de Francesco.',
+    placeholder: 'Posez votre question…',
+    quick: ['📶 WiFi', '🕙 Check-out', '🚿 Eau chaude', '🍝 Restaurants', '🚇 Transports', '✨ Extras'],
+    quickMsg: ['Quel est le mot de passe WiFi ?', 'À quelle heure est le check-out ?', 'Comment fonctionne l\'eau chaude ?', 'Quels restaurants recommandez-vous ?', 'Comment aller au Colisée ?', 'Quels services supplémentaires propose Francesco ?'],
+  },
+  es: {
+    greeting: '¡Bienvenido!',
+    welcome: 'Soy tu conserje personal. Pregúntame cualquier cosa sobre el apartamento, WiFi, restaurantes, transporte o los servicios extra de Francesco.',
+    placeholder: 'Escribe tu pregunta…',
+    quick: ['📶 WiFi', '🕙 Check-out', '🚿 Agua caliente', '🍝 Restaurantes', '🚇 Transporte', '✨ Extras'],
+    quickMsg: ['¿Cuál es la contraseña del WiFi?', '¿A qué hora es el check-out?', '¿Cómo funciona el agua caliente?', '¿Qué restaurantes recomiendas?', '¿Cómo llego al Coliseo?', '¿Qué servicios extra ofrece Francesco?'],
+  },
+  zh: {
+    greeting: '欢迎！',
+    welcome: '我是您的私人礼宾。请随时询问关于公寓、WiFi、餐厅、交通或Francesco额外服务的任何问题。',
+    placeholder: '请输入您的问题…',
+    quick: ['📶 WiFi', '🕙 退房', '🚿 热水', '🍝 餐厅', '🚇 交通', '✨ 特别服务'],
+    quickMsg: ['WiFi密码是什么？', '几点退房？', '热水怎么用？', '有什么餐厅推荐？', '怎么去罗马斗兽场？', 'Francesco提供哪些额外服务？'],
+  },
+  ko: {
+    greeting: '환영합니다!',
+    welcome: '저는 귀하의 개인 컨시어지입니다. 아파트, WiFi, 레스토랑, 교통 또는 Francesco의 추가 서비스에 대해 무엇이든 물어보세요.',
+    placeholder: '질문을 입력하세요…',
+    quick: ['📶 WiFi', '🕙 체크아웃', '🚿 온수', '🍝 레스토랑', '🚇 교통', '✨ 부가서비스'],
+    quickMsg: ['WiFi 비밀번호가 뭔가요?', '체크아웃은 몇 시인가요?', '온수는 어떻게 사용하나요?', '추천 레스토랑이 있나요?', '콜로세움에 어떻게 가나요?', 'Francesco의 부가 서비스는 무엇인가요?'],
+  },
+};
+
+const KNOWLEDGE_BASE = (room) => `
+=== GENERAL ===
+CHECK-IN/CHECK-OUT:
+- Check-in from 15:00. Check-out by 10:00. Late check-out never allowed.
+- Early check-in: check www.cravero20.it calendar — if previous night was free, request is possible.
+- Luggage after check-out: if no new arrivals same day, bags can stay in room. Otherwise: Deposito bagagli, Via Giovanni Giolitti 127, ~€5, 5-star rated.
+- Keys: return to key box after check-out. If not possible, leave on room table and WhatsApp Francesco.
+
+SECURITY:
+- Area is very safe. Garbatella is a quiet neighbourhood, everyone knows each other. Carabinieri station next to the building.
+- General advice for solo female travellers: avoid walking alone after 2-3am as normal precaution in any big city.
+- Rooms can be locked from inside.
+
+WIFI:
+- Main network: Iliadbox / password: m5zbrqh9wvqmxw7nqccms2
+${room === 'green'
+  ? '- If signal is weak: request extra access point via WhatsApp. Found in bottom drawer of bathroom. Connect to power + LAN cable under TV (small flap). Password: 92101135. Return after use.'
+  : '- If signal is weak: request extra access point via WhatsApp. Found in table drawer. Connect to power + LAN cable under TV (small flap). Password: not yet available, contact Francesco.'}
+
+KITCHEN (shared):
+- Shared kitchen — respect other guests, wash dishes immediately after use.
+- Cutlery: open drawer in front of fridge (top right), find hidden sliding inner drawer at top.
+- Food storage: shelves divided by room (Green Room / Grey Room), both in fridge and cabinets.
+- WARNING: on check-out day, all food left on your room's shelves will be thrown away.
+
+SUPERMARKETS:
+- Nearest: Margherita Conad, Via Fincati 10 (few minutes walk)
+- Larger: Sacoph, Via Caffaro 55 (~5 min walk)
+
+PARKING: Limited in area. Try Via Giovannipoli or Via Cialdi.
+
+BATHROOM & TOWELS:
+- Towels and hairdryer: in bathroom cabinet.
+- Toilet paper: in bathroom or bathroom cabinet. If needed, contact Francesco.
+${room === 'green'
+  ? '- YOUR BATHROOM: private, reserved exclusively for Green Room guests. Compact with handheld shower hose instead of bidet.'
+  : '- YOUR BATHROOM: en-suite private bathroom. Compact with handheld shower hose instead of bidet.'}
+
+BED:
+${room === 'green'
+  ? '- French double bed, 140cm wide (slightly narrower than standard, still comfortable for couples).'
+  : '- Standard double bed, 160cm wide.'}
+
+HEATING:
+- Central building heating: active 4pm–10pm in winter. Radiator near entrance door. If cold during heating hours, turn knob in opposite direction (set between 2 and 5).
+${room === 'green'
+  ? '- YOUR BATHROOM heating: electric warm-air heater with white remote control inside bathroom.'
+  : '- YOUR BATHROOM heating: standard radiator.'}
+
+ELECTRICITY:
+- Power outage: electrical panel just inside entrance on the left (behind a door). "General" switch probably tripped — push it up.
+- After restoring power: press boiler power button (circular, with dash), then press "Set" without changing settings until nothing flashes.
+
+LAUNDRY: Washing machine available — be respectful of other guests.
+
+SMOKING: Strictly no smoking inside (loud smoke alarm). Balcony: smoking allowed.
+
+APARTMENT INFO:
+- Only 2 rooms: Green Room and Grey Room. No owner living here. Set up like a hotel.
+
+EXTRA SERVICES (book via WhatsApp +39 327 039 3627):
+- Bike rental: two bicycles available.
+- Homemade pasta class: Francesco teaches pasta and sauce from scratch. Dishes: Amatriciana, Carbonara, Meat ragù, Cacio e pepe.
+- Scooter tour: panoramic tour of Rome's historic centre by scooter (Maxi Scooter 350 GT).
+
+DISCOUNT FOR RETURNING GUESTS:
+- 4-star Airbnb review: 10% discount on direct booking next time.
+- 5-star review: 15% discount + no platform fees = up to 30-35% total savings. Valid 12 months, extendable to friends. Book via WhatsApp.
+
+RESTAURANTS NEARBY (Francesco's personal guide):
+Very close:
+- Panonto (30 sec): one of Rome's most popular pizzerias. No reservations — just show up.
+- Tozzo Strit Fud (1 min, behind the house): Roman street food. Say "mi manda Francesco il Toscano" for 10% off!
+- Bar Foschi (1 min): artisan pastry, perfect for breakfast and aperitivo.
+- Ristorante Georgiano (1 min): authentic Georgian cuisine.
+
+Classic Roman trattorias:
+- Tanto pè magnà (9 min): most Roman place, exceptional carbonara.
+- Er Grottino del Traslocatore (3 min): local institution, great amatriciana.
+- Dar Moschino (5 min): historic, very authentic trattoria.
+- Il Girasole (15 min): neighbourhood reference for amatriciana and carbonara.
+- O Masto 3 Al Vesuvio (5 min): excellent Neapolitan pizza and fried starters.
+- I Tre Fratelli (8 min): reliable, international-friendly.
+- Osteria Pizzeria Giovanni (17 min): elderly lady cooks whatever she likes. Very cheap, authentic, unpredictable.
+
+Special evenings:
+- Ristoro degli Angeli (right behind house): elegant, perfect for romantic dinner.
+- Anna e Bicchieri (3 min): refined cuisine and wine bar.
+
+Bars & wine:
+- La Mescita (2 min): fantastic wine bar for aperitivo, great taglieri.
+- Bar dei Cesaroni (8 min): historic bar from Italian TV series.
+- Gelato Baciato (2 min): exceptional gelato — look for the queue!
+
+TIP: Always book ahead, especially weekends. Panonto doesn't take reservations.
+
+TRANSPORT:
+- Metro Garbatella: 7 min walk. Colosseum: 3 stops. St Peter's/Vatican: 6 stops.
+- Roma Ostiense station: 1.5km. Tickets: www.atac.roma.it
+
+ROMAN CUISINE GUIDE:
+- Carbonara: eggs, guanciale, pecorino romano, black pepper. NEVER with cream!
+- Amatriciana: tomato, guanciale, pecorino. Traditionally with bucatini.
+- Cacio e Pepe: pecorino and black pepper only.
+- Gricia: "white carbonara" — guanciale, pecorino, pepper.
+- Saltimbocca alla Romana: veal with prosciutto and sage.
+- Carciofi alla Giudia: Jewish-style fried artichoke (best at Jewish Ghetto).
+- Supplì: fried rice balls with mozzarella.
+
+CONTACT: Francesco: +39 327 039 3627 (WhatsApp). Use this concierge first — contact Francesco only if the concierge cannot help.
+`;
+
+// ---- UI INIT ----
+const ui = UI[lang] || UI['en'];
+document.getElementById('langFlag').textContent = FLAGS[lang] || '🌍';
+document.getElementById('roomLabel').textContent = ROOM_LABEL[room] || 'Green Room';
+document.getElementById('backBtn').href = BACK_URL[room] || 'landing-green.html';
+document.getElementById('welcomeGreeting').textContent = ui.greeting;
+document.getElementById('welcomeText').textContent = ui.welcome;
+document.getElementById('textInput').placeholder = ui.placeholder;
+document.title = `Cravero20 — ${ROOM_LABEL[room]} Concierge`;
+
+const qqEl = document.getElementById('quickQuestions');
+ui.quick.forEach((label, i) => {
+  const btn = document.createElement('button');
+  btn.className = 'quick-btn';
+  btn.textContent = label;
+  btn.onclick = () => sendQuick(ui.quickMsg[i]);
+  qqEl.appendChild(btn);
+});
+
+// ---- CHAT ----
+const messagesEl = document.getElementById('messages');
+const textInput = document.getElementById('textInput');
+const sendBtn = document.getElementById('sendBtn');
+let conversationHistory = [];
+let isLoading = false;
+
+const SYSTEM_PROMPT = `You are the AI concierge of Cravero20, a B&B in Garbatella, Rome. You MUST respond ONLY in ${LANG_NAMES[lang] || 'English'} (language code: ${lang}). Be warm, helpful and concise. Never invent information. If unsure, suggest contacting Francesco on WhatsApp at +39 327 039 3627.\n\nThe guest is staying in the ${room === 'green' ? 'Green Room' : 'Gray Room'}.\n\n${KNOWLEDGE_BASE(room)}`;
+
+function addMessage(role, text) {
+  const qq = document.getElementById('quickQuestions');
+  if (role === 'user' && qq) qq.style.display = 'none';
+
+  const div = document.createElement('div');
+  div.className = `message ${role}`;
+
+  const avatar = document.createElement('div');
+  avatar.className = `avatar ${role}`;
+  avatar.textContent = role === 'ai' ? 'C20' : (FLAGS[lang] || 'You');
+
+  const bubble = document.createElement('div');
+  bubble.className = 'bubble';
+  bubble.textContent = text;
+
+  div.appendChild(avatar);
+  div.appendChild(bubble);
+  messagesEl.appendChild(div);
+  messagesEl.scrollTop = messagesEl.scrollHeight;
+}
+
+function addTypingIndicator() {
+  const div = document.createElement('div');
+  div.className = 'message ai';
+  div.id = 'typing';
+  const avatar = document.createElement('div');
+  avatar.className = 'avatar ai';
+  avatar.textContent = 'C20';
+  const bubble = document.createElement('div');
+  bubble.className = 'bubble';
+  bubble.innerHTML = '<div class="typing-dots"><span></span><span></span><span></span></div>';
+  div.appendChild(avatar);
+  div.appendChild(bubble);
+  messagesEl.appendChild(div);
+  messagesEl.scrollTop = messagesEl.scrollHeight;
+}
+
+function removeTypingIndicator() {
+  const t = document.getElementById('typing');
+  if (t) t.remove();
+}
+
+async function sendMessage() {
+  const text = textInput.value.trim();
+  if (!text || isLoading) return;
+
+  isLoading = true;
+  sendBtn.disabled = true;
+  textInput.value = '';
+  textInput.style.height = 'auto';
+
+  addMessage('user', text);
+  conversationHistory.push({ role: 'user', parts: [{ text }] });
+  addTypingIndicator();
+
+  try {
+    const response = await fetch(PROXY_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        system_instruction: { parts: [{ text: SYSTEM_PROMPT }] },
+        contents: conversationHistory,
+        generationConfig: { temperature: 0.7, maxOutputTokens: 600 }
+      })
+    });
+
+    const data = await response.json();
+    const reply = data?.candidates?.[0]?.content?.parts?.[0]?.text
+      || 'Sorry, I could not process your request. Please contact Francesco on WhatsApp: +39 327 039 3627';
+
+    conversationHistory.push({ role: 'model', parts: [{ text: reply }] });
+    removeTypingIndicator();
+    addMessage('ai', reply);
+    speakText(reply);
+
+  } catch (err) {
+    removeTypingIndicator();
+    addMessage('ai', 'Connection error. Please try again or contact Francesco: +39 327 039 3627');
+  }
+
+  isLoading = false;
+  sendBtn.disabled = false;
+}
+
+function sendQuick(text) {
+  textInput.value = text;
+  sendMessage();
+}
+
+// ---- TTS ----
+const ttsBar = document.getElementById('ttsBar');
+const stopTtsBtn = document.getElementById('stopTtsBtn');
+
+function speakText(text) {
+  if (!('speechSynthesis' in window)) return;
+  window.speechSynthesis.cancel();
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = TTS_LANG[lang] || 'en-US';
+  utterance.rate = 0.95;
+  utterance.pitch = 1;
+  utterance.onstart = () => ttsBar.classList.add('active');
+  utterance.onend = () => ttsBar.classList.remove('active');
+  utterance.onerror = () => ttsBar.classList.remove('active');
+  window.speechSynthesis.speak(utterance);
+}
+
+stopTtsBtn.addEventListener('click', () => {
+  window.speechSynthesis.cancel();
+  ttsBar.classList.remove('active');
+});
+
+// ---- VOICE INPUT ----
+let recognition = null;
+let isRecording = false;
+const micBtn = document.getElementById('micBtn');
+
+function toggleMic() {
+  if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+    alert('Voice input not supported on this browser. Please use Chrome.');
+    return;
+  }
+
+  if (isRecording) { recognition.stop(); return; }
+
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  recognition = new SR();
+  recognition.continuous = false;
+  recognition.interimResults = false;
+  recognition.lang = TTS_LANG[lang] || 'en-US';
+
+  recognition.onstart = () => { isRecording = true; micBtn.classList.add('recording'); };
+  recognition.onresult = (e) => {
+    const t = e.results[0][0].transcript;
+    textInput.value = t;
+    textInput.style.height = 'auto';
+    textInput.style.height = textInput.scrollHeight + 'px';
+    sendMessage();
+  };
+  recognition.onerror = () => { isRecording = false; micBtn.classList.remove('recording'); };
+  recognition.onend = () => { isRecording = false; micBtn.classList.remove('recording'); };
+  recognition.start();
+}
+</script>
+</body>
+</html>
