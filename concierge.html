@@ -516,8 +516,6 @@ ui.quick.forEach((label, i) => {
   qqEl.appendChild(btn);
 });
 
-loadKnowledgeBase();
-
 // ---- CHAT ----
 const messagesEl = document.getElementById('messages');
 const textInput = document.getElementById('textInput');
@@ -525,6 +523,8 @@ const sendBtn = document.getElementById('sendBtn');
 let conversationHistory = [];
 let isLoading = false;
 let SYSTEM_PROMPT = null;
+
+loadKnowledgeBase();
 
 // ---- KNOWLEDGE BASE FETCH ----
 function showLoadingState() {
