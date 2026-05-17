@@ -449,6 +449,7 @@ const LANG_NAMES = { it:'Italiano', en:'English', fr:'Français', es:'Español',
 
 const ROOM_LABEL = { green: 'Green Room', gray: 'Gray Room' };
 const BACK_URL = { green: 'landing-green.html', gray: 'landing-gray.html' };
+const KB_FILE = { green: 'knowledge-green.txt', gray: 'knowledge-gray.txt' };
 
 const UI = {
   it: {
@@ -495,117 +496,6 @@ const UI = {
   },
 };
 
-const KNOWLEDGE_BASE = (room) => `
-=== GENERAL ===
-CHECK-IN/CHECK-OUT:
-- Check-in from 15:00. Check-out by 10:00. Late check-out never allowed.
-- Early check-in: check www.cravero20.it calendar — if previous night was free, request is possible.
-- Luggage after check-out: if no new arrivals same day, bags can stay in room. Otherwise: Deposito bagagli, Via Giovanni Giolitti 127, ~€5, 5-star rated.
-- Keys: return to key box after check-out. If not possible, leave on room table and WhatsApp Francesco.
-
-SECURITY:
-- Area is very safe. Garbatella is a quiet neighbourhood, everyone knows each other. Carabinieri station next to the building.
-- General advice for solo female travellers: avoid walking alone after 2-3am as normal precaution in any big city.
-- Rooms can be locked from inside.
-
-WIFI:
-- Main network: Iliadbox / password: m5zbrqh9wvqmxw7nqccms2
-${room === 'green'
-  ? '- If signal is weak: request extra access point via WhatsApp. Found in bottom drawer of bathroom. Connect to power + LAN cable under TV (small flap). Password: 92101135. Return after use.'
-  : '- If signal is weak: request extra access point via WhatsApp. Found in table drawer. Connect to power + LAN cable under TV (small flap). Password: not yet available, contact Francesco.'}
-
-KITCHEN (shared):
-- Shared kitchen — respect other guests, wash dishes immediately after use.
-- Cutlery: open drawer in front of fridge (top right), find hidden sliding inner drawer at top.
-- Food storage: shelves divided by room (Green Room / Grey Room), both in fridge and cabinets.
-- WARNING: on check-out day, all food left on your room's shelves will be thrown away.
-
-SUPERMARKETS:
-- Nearest: Margherita Conad, Via Fincati 10 (few minutes walk)
-- Larger: Sacoph, Via Caffaro 55 (~5 min walk)
-
-PARKING: Limited in area. Try Via Giovannipoli or Via Cialdi.
-
-BATHROOM & TOWELS:
-- Towels and hairdryer: in bathroom cabinet.
-- Toilet paper: in bathroom or bathroom cabinet. If needed, contact Francesco.
-${room === 'green'
-  ? '- YOUR BATHROOM: private, reserved exclusively for Green Room guests. Compact with handheld shower hose instead of bidet.'
-  : '- YOUR BATHROOM: en-suite private bathroom. Compact with handheld shower hose instead of bidet.'}
-
-BED:
-${room === 'green'
-  ? '- French double bed, 140cm wide (slightly narrower than standard, still comfortable for couples).'
-  : '- Standard double bed, 160cm wide.'}
-
-HEATING:
-- Central building heating: active 4pm–10pm in winter. Radiator near entrance door. If cold during heating hours, turn knob in opposite direction (set between 2 and 5).
-${room === 'green'
-  ? '- YOUR BATHROOM heating: electric warm-air heater with white remote control inside bathroom.'
-  : '- YOUR BATHROOM heating: standard radiator.'}
-
-ELECTRICITY:
-- Power outage: electrical panel just inside entrance on the left (behind a door). "General" switch probably tripped — push it up.
-- After restoring power: press boiler power button (circular, with dash), then press "Set" without changing settings until nothing flashes.
-
-LAUNDRY: Washing machine available — be respectful of other guests.
-
-SMOKING: Strictly no smoking inside (loud smoke alarm). Balcony: smoking allowed.
-
-APARTMENT INFO:
-- Only 2 rooms: Green Room and Grey Room. No owner living here. Set up like a hotel.
-
-EXTRA SERVICES (book via WhatsApp +39 327 039 3627):
-- Bike rental: two bicycles available.
-- Homemade pasta class: Francesco teaches pasta and sauce from scratch. Dishes: Amatriciana, Carbonara, Meat ragù, Cacio e pepe.
-- Scooter tour: panoramic tour of Rome's historic centre by scooter (Maxi Scooter 350 GT).
-
-DISCOUNT FOR RETURNING GUESTS:
-- 4-star Airbnb review: 10% discount on direct booking next time.
-- 5-star review: 15% discount + no platform fees = up to 30-35% total savings. Valid 12 months, extendable to friends. Book via WhatsApp.
-
-RESTAURANTS NEARBY (Francesco's personal guide):
-Very close:
-- Panonto (30 sec): one of Rome's most popular pizzerias. No reservations — just show up.
-- Tozzo Strit Fud (1 min, behind the house): Roman street food. Say "mi manda Francesco il Toscano" for 10% off!
-- Bar Foschi (1 min): artisan pastry, perfect for breakfast and aperitivo.
-- Ristorante Georgiano (1 min): authentic Georgian cuisine.
-
-Classic Roman trattorias:
-- Tanto pè magnà (9 min): most Roman place, exceptional carbonara.
-- Er Grottino del Traslocatore (3 min): local institution, great amatriciana.
-- Dar Moschino (5 min): historic, very authentic trattoria.
-- Il Girasole (15 min): neighbourhood reference for amatriciana and carbonara.
-- O Masto 3 Al Vesuvio (5 min): excellent Neapolitan pizza and fried starters.
-- I Tre Fratelli (8 min): reliable, international-friendly.
-- Osteria Pizzeria Giovanni (17 min): elderly lady cooks whatever she likes. Very cheap, authentic, unpredictable.
-
-Special evenings:
-- Ristoro degli Angeli (right behind house): elegant, perfect for romantic dinner.
-- Anna e Bicchieri (3 min): refined cuisine and wine bar.
-
-Bars & wine:
-- La Mescita (2 min): fantastic wine bar for aperitivo, great taglieri.
-- Bar dei Cesaroni (8 min): historic bar from Italian TV series.
-- Gelato Baciato (2 min): exceptional gelato — look for the queue!
-
-TIP: Always book ahead, especially weekends. Panonto doesn't take reservations.
-
-TRANSPORT:
-- Metro Garbatella: 7 min walk. Colosseum: 3 stops. St Peter's/Vatican: 6 stops.
-- Roma Ostiense station: 1.5km. Tickets: www.atac.roma.it
-
-ROMAN CUISINE GUIDE:
-- Carbonara: eggs, guanciale, pecorino romano, black pepper. NEVER with cream!
-- Amatriciana: tomato, guanciale, pecorino. Traditionally with bucatini.
-- Cacio e Pepe: pecorino and black pepper only.
-- Gricia: "white carbonara" — guanciale, pecorino, pepper.
-- Saltimbocca alla Romana: veal with prosciutto and sage.
-- Carciofi alla Giudia: Jewish-style fried artichoke (best at Jewish Ghetto).
-- Supplì: fried rice balls with mozzarella.
-
-CONTACT: Francesco: +39 327 039 3627 (WhatsApp). Use this concierge first — contact Francesco only if the concierge cannot help.
-`;
 
 // ---- UI INIT ----
 const ui = UI[lang] || UI['en'];
@@ -626,14 +516,57 @@ ui.quick.forEach((label, i) => {
   qqEl.appendChild(btn);
 });
 
+loadKnowledgeBase();
+
 // ---- CHAT ----
 const messagesEl = document.getElementById('messages');
 const textInput = document.getElementById('textInput');
 const sendBtn = document.getElementById('sendBtn');
 let conversationHistory = [];
 let isLoading = false;
+let SYSTEM_PROMPT = null;
 
-const SYSTEM_PROMPT = `You are the AI concierge of Cravero20, a B&B in Garbatella, Rome. You MUST respond ONLY in ${LANG_NAMES[lang] || 'English'} (language code: ${lang}). Be warm, helpful and concise. Never invent information. If unsure, suggest contacting Francesco on WhatsApp at +39 327 039 3627.\n\nThe guest is staying in the ${room === 'green' ? 'Green Room' : 'Gray Room'}.\n\n${KNOWLEDGE_BASE(room)}`;
+// ---- KNOWLEDGE BASE FETCH ----
+function showLoadingState() {
+  textInput.disabled = true;
+  sendBtn.disabled = true;
+  textInput.placeholder = '⏳ Loading…';
+}
+
+function hideLoadingState() {
+  textInput.disabled = false;
+  sendBtn.disabled = false;
+  textInput.placeholder = ui.placeholder;
+}
+
+function showKbError() {
+  const errDiv = document.createElement('div');
+  errDiv.className = 'message ai';
+  const avatar = document.createElement('div');
+  avatar.className = 'avatar ai';
+  avatar.textContent = 'C20';
+  const bubble = document.createElement('div');
+  bubble.className = 'bubble';
+  bubble.textContent = 'Could not load the knowledge base. Please contact Francesco on WhatsApp: +39 327 039 3627';
+  errDiv.appendChild(avatar);
+  errDiv.appendChild(bubble);
+  messagesEl.appendChild(errDiv);
+  textInput.placeholder = 'Service unavailable';
+}
+
+async function loadKnowledgeBase() {
+  showLoadingState();
+  try {
+    const file = KB_FILE[room] || 'knowledge-green.txt';
+    const res = await fetch(file);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const kb = await res.text();
+    SYSTEM_PROMPT = `You are the AI concierge of Cravero20, a B&B in Garbatella, Rome. You MUST respond ONLY in ${LANG_NAMES[lang] || 'English'} (language code: ${lang}). Be warm, helpful and concise. Never invent information. If unsure, suggest contacting Francesco on WhatsApp at +39 327 039 3627.\n\nThe guest is staying in the ${ROOM_LABEL[room]}.\n\n${kb}`;
+    hideLoadingState();
+  } catch (err) {
+    showKbError();
+  }
+}
 
 function addMessage(role, text) {
   const qq = document.getElementById('quickQuestions');
@@ -679,7 +612,7 @@ function removeTypingIndicator() {
 
 async function sendMessage() {
   const text = textInput.value.trim();
-  if (!text || isLoading) return;
+  if (!text || isLoading || !SYSTEM_PROMPT) return;
 
   isLoading = true;
   sendBtn.disabled = true;
