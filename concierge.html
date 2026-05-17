@@ -540,6 +540,10 @@ function hideLoadingState() {
 }
 
 function showKbError() {
+  hideLoadingState();
+  textInput.placeholder = 'Service unavailable — contact Francesco';
+  textInput.disabled = true;
+  sendBtn.disabled = true;
   const errDiv = document.createElement('div');
   errDiv.className = 'message ai';
   const avatar = document.createElement('div');
@@ -547,18 +551,17 @@ function showKbError() {
   avatar.textContent = 'C20';
   const bubble = document.createElement('div');
   bubble.className = 'bubble';
-  bubble.textContent = 'Could not load the knowledge base. Please contact Francesco on WhatsApp: +39 327 039 3627';
+  bubble.textContent = '⚠️ Could not load. Please contact Francesco on WhatsApp: +39 327 039 3627';
   errDiv.appendChild(avatar);
   errDiv.appendChild(bubble);
   messagesEl.appendChild(errDiv);
-  textInput.placeholder = 'Service unavailable';
 }
 
 async function loadKnowledgeBase() {
   showLoadingState();
   try {
     const file = KB_FILE[room] || 'knowledge-green.txt';
-    const res = await fetch(file);
+    const res = await fetch(file + '?v=' + Date.now());
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const kb = await res.text();
     SYSTEM_PROMPT = `You are the AI concierge of Cravero20, a B&B in Garbatella, Rome. You MUST respond ONLY in ${LANG_NAMES[lang] || 'English'} (language code: ${lang}). Be warm, helpful and concise. Never invent information. If unsure, suggest contacting Francesco on WhatsApp at +39 327 039 3627.\n\nThe guest is staying in the ${ROOM_LABEL[room]}.\n\n${kb}`;
@@ -612,7 +615,12 @@ function removeTypingIndicator() {
 
 async function sendMessage() {
   const text = textInput.value.trim();
-  if (!text || isLoading || !SYSTEM_PROMPT) return;
+  if (!text || isLoading) return;
+  if (!SYSTEM_PROMPT) {
+    textInput.placeholder = '⏳ Still loading, try again…';
+    setTimeout(() => { textInput.placeholder = ui.placeholder; }, 2000);
+    return;
+  }
 
   isLoading = true;
   sendBtn.disabled = true;
