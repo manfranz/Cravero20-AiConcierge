@@ -89,10 +89,6 @@ Illuminazione camera: Regolabile con sistema a dimmer.
 
 *Tempo di riscaldamento normale: 2-3 ore per il pieno*
 
-Prima della doccia: premi il tasto 'set' una volta sullo scaldabagno per controllare la temperatura
-
-*Per riscaldamento più rapido: premi il tasto '>>' per attivare la modalità boost (1,5-2,5 ore)*
-
 Se altri ospiti hanno appena fatto la doccia, potresti dover aspettare che l'acqua si riscaldi di nuovo
 
 Orari consigliati per la doccia:
