@@ -438,11 +438,11 @@
 </div>
 
 <script>
-const PROXY_URL = 'https://gemini-proxy.manfranz.workers.dev/';
-
 const params = new URLSearchParams(window.location.search);
 const room = params.get('room') || 'green';
 const lang = params.get('lang') || 'en';
+
+const PROXY_URL = 'https://gemini-proxy.manfranz.workers.dev/?room=' + room;
 
 const FLAGS = { it:'🇮🇹', en:'🇬🇧', fr:'🇫🇷', es:'🇪🇸', zh:'🇨🇳', ko:'🇰🇷' };
 const TTS_LANG = { it:'it-IT', en:'en-US', fr:'fr-FR', es:'es-ES', zh:'zh-CN', ko:'ko-KR' };
