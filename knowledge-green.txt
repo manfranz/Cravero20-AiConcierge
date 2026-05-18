@@ -13,7 +13,7 @@ Il contesto – Garbatella:
 
 Posizione strategica:
 
-"Siamo a 7 minuti a piedi dalla Metro Garbatella, a 3 fermate di metro dal Colosseo e a 6 fermate da San Pietro. La stazione Roma Ostiense dista 1,5 km."
+"Siamo a 5 minuti a piedi dalla Metro Garbatella, a 3 fermate di metro dal Colosseo e a 6 fermate da San Pietro. La stazione Roma Ostiense dista 900 metri (12 minuti a piedi)."
 
 Il padrone di casa:
 
@@ -194,6 +194,38 @@ Salta la corrente:
 "Se salta la corrente, puoi trovare il quadro elettrico subito all'interno della porta d'ingresso a sinistra (c'è una porta). Probabilmente l'interruttore 'Generale' è abbassato. Tiralo su.
 
 Ricorda di riavviare lo scaldabagno premendo semplicemente il pulsante di accensione (quello classico circolare con il trattino in basso) e poi cliccando il tasto 'set' senza modificare le impostazioni finché non smette di lampeggiare nulla."
+
+🏠 ACCESSO ALL'APPARTAMENTO
+IMPORTANTE – GUARDA IL VIDEO PRIMA DI VENIRE:
+
+"Per accedere all'appartamento devi recarti a PIAZZA BARTOLOMEO ROMANO (punto mappa: https://maps.app.goo.gl/GDpCEZ2KCM81tu977). Da lì il video ti guiderà verso l'appartamento e ti fornirà tutte le istruzioni essenziali.
+
+ATTENZIONE: È assolutamente necessario guardare il video con attenzione, altrimenti non riuscirai a trovare il portone del condominio e i keylocker — che NON sono in Via Cravero!
+
+IMPORTANTE: Non provare ad accedere all'appartamento senza aver visto il video. Se hai dubbi, scrivi a Francesco prima.
+
+Video in Italiano: https://youtu.be/pYKw5E8fnBo
+Video in Inglese: https://youtu.be/OIh8MwSOBxg
+Video in Spagnolo: https://youtu.be/72EIiUg4d6M
+Video in Francese: https://youtu.be/DrwB2JY5y58
+Video in Cinese: https://youtu.be/FFP2vWtqKZ8"
+
+🚌 COME ARRIVARE A PIAZZA BARTOLOMEO ROMANO
+
+Dall'aeroporto di Fiumicino:
+Opzione principale: Treno Leonardo Express fino alla Stazione Roma Ostiense, poi a piedi 900 metri (12 minuti) oppure taxi.
+Alternativa 1: Treno Leonardo Express fino a Roma Termini, poi Metro fino a Metro Garbatella, poi a piedi 650 metri.
+Alternativa 2: Autobus fino a Termini (es. Terravision – controllare orari, dopo le 24:00 potrebbe non passare), poi Metro fino a Metro Garbatella, poi a piedi 650 metri.
+
+Dall'aeroporto di Ciampino:
+Opzione principale: Taxi fino a casa.
+Alternativa: Autobus fino a Termini (es. Terravision – controllare orari), poi Metro fino a Metro Garbatella, poi a piedi 650 metri.
+
+Dalla Stazione Termini:
+Metro fino a Metro Garbatella, poi a piedi 650 metri.
+
+Dalla Stazione Ostiense:
+A piedi 900 metri (12 minuti) oppure taxi.
 
 🚇 TRASPORTI PUBBLICI
 Biglietti:
