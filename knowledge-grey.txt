@@ -263,7 +263,7 @@ Biglietti:
 
 "I biglietti si acquistano alle macchinette automatiche nelle stazioni metro, nelle tabaccherie (insegna con la T) e in alcune edicole e bar.
 
-Tariffe principali (2025):
+Tariffe principali (indicative — verifica sempre sul sito ATAC o presso i rivenditori perché potrebbero essere cambiate):
 • Biglietto singolo BIT (100 minuti, tutti i mezzi): 1,50 €
 • Giornaliero (24 ore): 7,00 €
 • 48 ore: 12,50 €
@@ -272,7 +272,7 @@ Tariffe principali (2025):
 
 Il biglietto singolo vale 100 minuti dalla prima validazione e permette cambi illimitati tra bus, tram e metro (una sola corsa in metro però).
 
-Per orari, mappe e percorsi: https://www.atac.roma.it/biglietti-e-abbonamenti"
+Per tariffe aggiornate, orari e mappe: https://www.atac.roma.it/biglietti-e-abbonamenti"
 
 🗺️ GUIDA DEL QUARTIERE (per ospiti Booking.com)
 Se hai prenotato su Booking.com, puoi trovare la guida completa del quartiere ai seguenti link (scegli la tua lingua):
