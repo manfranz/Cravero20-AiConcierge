@@ -49,6 +49,22 @@ Se perdi le chiavi:
 
 "Contatta Francesco e troverete una soluzione insieme."
 
+📤 CHECK-OUT
+Orario di check-out: entro le ore 10:00.
+
+Check-out posticipato (dopo le 10:00):
+
+"Il check-out posticipato non è mai consentito."
+
+Deposito bagagli in stanza dopo il check-out:
+
+"Se il giorno del tuo check-out non ci sono nuovi ospiti in arrivo nella tua stanza, puoi lasciare le valigie in camera e tornare a prenderle più tardi.
+Se invece ci sono ospiti in entrata lo stesso giorno, non è possibile lasciare le valigie in stanza. In quel caso, ti consigliamo il deposito bagagli alla Stazione Termini: Via Giovanni Giolitti 127 — circa 5 € per bagaglio, valutazione 5 stelle."
+
+Come verificare se ci sono altri check-in il giorno del tuo check-out:
+
+"Per sapere se ci sono check-in o check-out lo stesso giorno, puoi controllare il calendario sul sito www.cravero20.it."
+
 🌐 INTERNET
 Network name: Iliadbox
 
