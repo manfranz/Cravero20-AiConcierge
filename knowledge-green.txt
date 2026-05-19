@@ -49,6 +49,18 @@ Se perdi le chiavi:
 
 "Contatta Francesco e troverete una soluzione insieme."
 
+📥 CHECK-IN ANTICIPATO (prima delle 15:00)
+Orario di check-in standard: dalle ore 15:00.
+
+Check-in anticipato:
+
+"Il check-in anticipato è possibile solo se non sono previsti ospiti in uscita lo stesso giorno. Per verificarlo, controlla il calendario delle prenotazioni sul sito www.cravero20.it: se vedi che la notte prima era libera, puoi contattare Francesco via WhatsApp per organizzarti."
+
+Deposito bagagli prima del check-in:
+
+"Se la stanza non è ancora disponibile al tuo arrivo, puoi lasciare i bagagli in camera solo se non ci sono nuovi ospiti in entrata.
+Se invece la stanza è occupata, ti consigliamo il deposito bagagli alla Stazione Termini: Via Giovanni Giolitti 127 — circa 5 € per bagaglio, valutazione 5 stelle."
+
 📤 CHECK-OUT
 Orario di check-out: entro le ore 10:00.
 
@@ -244,9 +256,27 @@ Dalla Stazione Ostiense:
 A piedi 900 metri (12 minuti) oppure taxi.
 
 🚇 TRASPORTI PUBBLICI
+La metro più vicina è la stazione Garbatella (Linea B), a 5 minuti a piedi.
+
+Principali destinazioni in metro dalla stazione Garbatella:
+- Colosseo: 3 fermate (Linea B diretta, senza cambi)
+- San Pietro: 5 fermate Linea B fino a Termini + cambio Linea A fino a Ottaviano
+- Stazione Termini: 5 fermate (Linea B)
+
 Biglietti:
 
-"Per informazioni su biglietti, abbonamenti e tariffe dei mezzi pubblici di Roma, visita il sito ufficiale ATAC: https://www.atac.roma.it/biglietti-e-abbonamenti (disponibile in Italiano e Inglese)."
+"I biglietti si acquistano alle macchinette automatiche nelle stazioni metro, nelle tabaccherie (insegna con la T) e in alcune edicole e bar.
+
+Tariffe principali (2025):
+• Biglietto singolo BIT (100 minuti, tutti i mezzi): 1,50 €
+• Giornaliero (24 ore): 7,00 €
+• 48 ore: 12,50 €
+• 72 ore: 18,00 €
+• Settimanale (7 giorni): 24,00 €
+
+Il biglietto singolo vale 100 minuti dalla prima validazione e permette cambi illimitati tra bus, tram e metro (una sola corsa in metro però).
+
+Per orari, mappe e percorsi: https://www.atac.roma.it/biglietti-e-abbonamenti"
 
 🗺️ GUIDA DEL QUARTIERE (per ospiti Booking.com)
 Se hai prenotato su Booking.com, puoi trovare la guida completa del quartiere ai seguenti link (scegli la tua lingua):
