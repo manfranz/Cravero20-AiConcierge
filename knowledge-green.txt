@@ -56,12 +56,6 @@ Check-in anticipato:
 
 "Il check-in anticipato è possibile solo se non sono previsti ospiti in uscita lo stesso giorno. Per verificarlo, controlla il calendario delle prenotazioni sul sito www.cravero20.it: se vedi che la notte prima era libera, puoi contattare Francesco via WhatsApp per organizzarti."
 
-Deposito bagagli prima del check-in:
-
-"Per lasciare i bagagli prima che la stanza sia disponibile, contatta Francesco via WhatsApp per concordarlo. Poi dipende dalla situazione:
-• Se non ci sono nuovi ospiti in entrata nella tua stanza, puoi lasciare le valigie in camera.
-• Se la stanza è occupata, non è possibile. In quel caso, ti consigliamo il deposito bagagli alla Stazione Termini: Via Giovanni Giolitti 127 — circa 5 € per bagaglio, valutazione 5 stelle."
-
 📤 CHECK-OUT
 Orario di check-out: entro le ore 10:00.
 
@@ -69,15 +63,16 @@ Check-out posticipato (dopo le 10:00):
 
 "Il check-out posticipato non è mai consentito."
 
-Deposito bagagli in stanza dopo il check-out:
-
-"Per lasciare i bagagli dopo il check-out, contatta Francesco via WhatsApp per concordarlo. Poi dipende dalla situazione:
-• Se non ci sono nuovi ospiti in arrivo nella tua stanza, puoi lasciare le valigie in camera e tornare a prenderle più tardi.
-• Se invece ci sono ospiti in entrata lo stesso giorno, non è possibile lasciare le valigie in stanza. In quel caso, ti consigliamo il deposito bagagli alla Stazione Termini: Via Giovanni Giolitti 127 — circa 5 € per bagaglio, valutazione 5 stelle."
-
 Come verificare se ci sono altri check-in il giorno del tuo check-out:
 
 "Per sapere se ci sono check-in o check-out lo stesso giorno, puoi controllare il calendario sul sito www.cravero20.it."
+
+🧳 DEPOSITO BAGAGLI
+Posso lasciare i bagagli prima del check-in o dopo il check-out?
+
+"Per lasciare i bagagli — sia prima del check-in che dopo il check-out — contatta Francesco via WhatsApp per concordarlo. Poi dipende dalla situazione:
+• Se non ci sono nuovi ospiti in entrata nella tua stanza, puoi lasciare le valigie in camera e tornare a prenderle più tardi.
+• Se la stanza è occupata o ci sono ospiti in arrivo lo stesso giorno, non è possibile lasciare i bagagli. In quel caso, ti consigliamo il deposito bagagli alla Stazione Termini: Via Giovanni Giolitti 127 — circa 5 € per bagaglio, valutazione 5 stelle su 5."
 
 🌐 INTERNET
 Network name: Iliadbox
