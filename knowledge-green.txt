@@ -88,7 +88,7 @@ L'access point si trova nell'ultimo cassetto in basso del bagno. Per collegarlo:
 
 Collegalo alla presa elettrica
 
-Collega il cavo LAN alla presa LAN che si trova sotto la televisione (c'è un piccolo sportellino che va abbassato)
+Collega il cavo LAN alla presa LAN che si trova sotto la televisione (c'è un piccolo sportellino che va abbassato). Usa la porta LAN in alto, non quella in basso vicino al pavimento — quella in alto è raggiungibile comodamente senza scala
 
 La password dell'access point della Green Room è: 92101135
 
