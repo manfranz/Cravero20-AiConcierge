@@ -90,7 +90,7 @@ Collegalo alla presa elettrica
 
 Collega il cavo LAN alla presa LAN che si trova sotto la televisione (c'è un piccolo sportellino che va abbassato)
 
-La password dell'access point della Grey Room non è ancora disponibile. Non appena la avremo, ti sarà comunicata.
+La password dell'access point della Grey Room è: 38298905
 
 Dopo l'uso, sei pregato di rimettere l'access point nel cassetto dov'era."
 
@@ -322,5 +322,3 @@ L'acqua calda è limitata: 100 litri condivisi tra due stanze – evitare sprech
 
 L'appartamento è in un edificio storico: muri spessi, carattere unico
 
-❓ COSA MANCA (da aggiornare quando disponibile)
-Password dell'access point per la Grey Room
